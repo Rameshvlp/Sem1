@@ -1,0 +1,143 @@
+
+<!doctype>
+<head>
+<title>PLAY WITH YOUR NAME</title>
+<style>
+body{
+background-color:rgb(214, 233, 180);
+}
+button{
+            color:black; 
+            background-color: goldenrod;
+            width:200px;
+            height: 44px;
+            font-family: monospace,monospace;
+            font-size: 23px;
+            font-weight: 500;
+}
+.wh{
+   width: 600px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 0px;    
+}
+h2{
+font-family: monospace,monaco;
+color:black;
+}
+footer{
+  text-align: center;
+  padding: 5px;
+  background-color: green;
+  color: yellow;
+  font-size: 20px;
+}
+.gr{
+font-size: 40px;
+color:purple;
+}
+
+</style>
+</head>
+<html>
+<body>
+<h2>Click on the button to enter the first name</h2>
+<button onclick="function1()">Fname</button>
+<h2>Click on the button to enter last name</h2>
+<button onclick="function2()">Lname</button>
+<h2>Click on the button to see your name</h2>
+<button onclick="function3()">Full name</button>
+<center>
+<h2 id="ar1"></h2>
+</center>
+<h2>Click on the button</h2>
+<div class="gr">
+<button onclick="function4()">Greet</button>
+<h1 id="ar2"></h1>
+</div>
+<h2>Click on the button to find length</h2>
+<button onclick="function5()">Length</button>
+<h2 id="ar3"></h2>
+<h2>Click on the button to find the reverse of your name</h2>
+<button onclick="function6()">Reverse</button>
+<h2 id="ar4"></h2>
+<h2>Click on the button</h2>
+<button onclick="function7()">Capitalize</button>
+<h2 id="ar5"></h2>
+<script>
+var temp1;
+var temp2;
+var check= /^[A-Za-z]+$/;
+function function1(){
+temp1=prompt("Enter the first name:");
+if(temp1.match(check))
+{
+return true;
+}
+else
+{
+alert("Name must be in alphabet characters only");
+return false;
+}
+}
+function function2(){
+temp2=prompt("Enter the last name:");
+if(temp1.match(check))
+{
+return true;
+}
+else
+{
+alert("Name must be in alphabet characters only");
+return false;
+}
+}
+var temp3;
+function function3(){
+temp3=temp1.concat(" ", temp2);
+document.getElementById("ar1").innerHTML= "YOUR NAME: "+temp3;
+}
+function function4(){
+var date = new Date();
+var hr = date.getHours();
+if(hr<12){
+document.getElementById("ar2").innerHTML= "GOOD MORNING-"+temp3;
+}
+else if(hr >= 12 && hr <= 17){
+document.getElementById("ar2").innerHTML= "GOOD AFTERNOON-"+temp3;
+}
+else if (hr >= 17 && hr <= 24){
+document.getElementById("ar2").innerHTML= "GOOD EVEING-"+temp3;
+}
+}
+function function5(){
+let a;
+let b;
+let tot;
+a=temp1.length;
+b=temp2.length;
+tot=a+b;
+document.getElementById("ar3").innerHTML= "Hi  "+temp3+": Your name is "+tot+" in length.";
+}
+function function6(){
+var rf=temp1.split("");
+var rf1=rf.reverse();
+var rf2=rf1.join("");
+var rl=temp2.split("");
+var rl1=rl.reverse();
+var rl2=rl1.join("");
+var rtemp=rf2.concat(" ", rl2);
+document.getElementById("ar4").innerHTML= "THE REVERSE:"+rtemp;
+}
+function function7(){
+var capf=temp1.charAt(0).toUpperCase() + temp1.slice(1);
+var capt=temp2.charAt(0).toUpperCase() + temp2.slice(1);
+var ctemp=capf.concat(" ", capt);
+document.getElementById("ar5").innerHTML= "YOUR NAME: "+ctemp;
+}
+</script>
+<footer>
+  <p>&#169;Copyrighted AKASH-22MX101-14/11/2022<br>
+</footer>
+</body>
+</html>

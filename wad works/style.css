@@ -1,0 +1,26 @@
+.sec1  {
+    padding-left:30%;
+    margin:auto;
+    margin-bottom:30px;
+    }
+    .sec2 {
+        padding-left:30%;
+        margin:auto;
+        margin-bottom: 30px;
+    }
+    .secwhole{
+        padding: 10%;
+        margin:30%;
+        margin-top: 10%;
+        border: 10px;
+        background-image: url("pic.jpg");
+    }
+    .foot{
+        color:lightyellow;
+        font-size: larger;
+        background-color:red;
+    }
+
+   h2{
+    color: aliceblue;
+   }
