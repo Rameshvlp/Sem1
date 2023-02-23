@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int i;
+  printf("enter the telephone call");
+  scanf("%d",&i);
+  if(i>99 && i<200)
+  {
+    printf("you bill is 1 rupee");
+  }
+  else
+  {
+    printf("your bill is 50 paise");
+  }
+  return 0;
+
+}

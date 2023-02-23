@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    
+    for(a=0;a<=110;a++)
+    {
+        printf("Enter the Number:");
+        scanf("%d",&a);
+
+        if(a%3==0 || a%5==0 || a%7==0)
+        {
+            printf("program stopped");
+            break;
+        }
+    }
+    
+    return 0;
+
+
+}
